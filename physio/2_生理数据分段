@@ -1,0 +1,7 @@
+import os
+import numpy as np
+import pandas as pd
+from pandas import read_csv 
+os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\data\\2_filterdata\\test')              #变更工作目录
+listfile = os.listdir()                                             #列出所有文件
+print (listfile)

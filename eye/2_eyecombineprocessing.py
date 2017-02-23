@@ -4,8 +4,8 @@ import pandas as pd
 from pandas import read_csv 
 import math
 from collections import Counter
-#os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_fix&sac')              #变更工作目录
-os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_f&s_alone') 
+os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_fix&sac\\others')              #变更工作目录
+#os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_f&s_alone') 
 listfile = os.listdir()                                             #列出所有文件
 print (listfile)
 
@@ -70,7 +70,7 @@ def MaxTime(s):
 		r[i] = max(section) - min(section)
 	return r.max()
 
-
+'''
 for x in listfile:
 	data = read_csv(x)
 	#时间修正
@@ -86,7 +86,7 @@ for x in listfile:
 	data['GazePitch'] = data['GazePitch']*180/math.pi
 
 	#变量A存储PRC值
-	A= pd.DataFrame(np.empty((6,17)))   
+	A= pd.DataFrame(np.zeros((6,17)))   
 
 	#第一段5km处非紧急接管
 	f1TimePoint = float(timepoint['5km非紧急'][timepoint['subject']==int(x.split(sep = '.')[0])])
@@ -261,7 +261,7 @@ for x in listfile:
 	
 
 '''
-x='409.csv'
+x='213.csv'
 data = read_csv(x)
 #时间修正
 SubjectNum = int(x.split(sep = '.')[0])           #获得被试编号
@@ -276,7 +276,7 @@ data['GazeHeading'][data['GazeHeading'] < 0] = -data['GazeHeading'][data['GazeHe
 data['GazePitch'] = data['GazePitch']*180/math.pi
 
 #变量A存储PRC值
-A= pd.DataFrame(np.empty((6,17)))   
+A= pd.DataFrame(np.zeros((6,17)))   
 
 
 #第一段5km处非紧急接管
@@ -460,4 +460,3 @@ A.ix[5,16] = MaxTime(f3before[['time','Saccade']])            #接管前最大�
 
 A.columns = ['subject','secondarytask','emergency','fix_times','fix_length','sac_times','sac_length','fix_times_before','fix_length_before','sac_times_before','sac_length_before','fix_times_after','fix_length_after','sac_times_after','sac_length_after','fix_max_before','sac_max_before']
 A.to_csv('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\3_Tf&Ts\\' + x,index = False,)
-'''

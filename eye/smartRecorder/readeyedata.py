@@ -1,7 +1,7 @@
 import os
 from pandas import read_table 
 import math
-os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyerecorderdata\\1_rawdata')              #变更工作目录
+os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyerecorderdata\\1_rawdata\\')              #变更工作目录
 listfile = os.listdir()                                             #列出所有文件
 print (listfile)
 

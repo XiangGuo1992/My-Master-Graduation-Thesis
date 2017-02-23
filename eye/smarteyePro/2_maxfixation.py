@@ -4,8 +4,8 @@ import pandas as pd
 from pandas import read_csv 
 import math
 from collections import Counter
-#os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_fix&sac')              #变更工作目录
-os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_f&s_alone') 
+os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_fix&sac\\others')              #变更工作目录
+#os.chdir('F:\\GuoXiang\\硕士毕业论文\\DATA\\eye\\eyeprolog\\2_f&s_alone') 
 listfile = os.listdir()                                             #列出所有文件
 print (listfile)
 
@@ -232,7 +232,7 @@ for x in listfile:
 	
 
 '''
-x='409.csv'
+x='213.csv'
 data = read_csv(x)
 #时间修正
 SubjectNum = int(x.split(sep = '.')[0])           #获得被试编号

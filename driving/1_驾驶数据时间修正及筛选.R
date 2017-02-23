@@ -15,5 +15,5 @@ for ( i in filenames)   #循环逐个处理.csv文件
                ,'brake','lightState','distanceAlongRoad','distanceToLeftBorder','distanceToRightBorder','offsetFromRoadCenter'
                ,'offsetFromLaneCenter','laneNumber','laneWidth','laneCurvature','drivingForwards')
     #将列名重命名为变量名
-    write.csv(A1,paste("F:/GuoXiang/毕业设计/吴恩泽/实验数据/driving data/2_filterdata/",i),row.names = FALSE)
+    write.csv(A1,paste("F:/GuoXiang/硕士毕业论文/DATA/data/2_filterdata/",i,sep = ''),row.names = FALSE)
 }
